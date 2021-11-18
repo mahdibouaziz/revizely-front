@@ -1,1 +1,141 @@
-<p>register works!</p>
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100">
+      <form
+        class="login100-form validate-form"
+        [formGroup]="registerForm"
+        (ngSubmit)="register()"
+        style="padding-top: 2rem"
+      >
+        <span class="login100-form-title">Register</span>
+
+        <p style="font-size: 1rem; margin-bottom: 0.2rem; margin-left: 0.5rem">
+          Username:
+        </p>
+        <div class="wrap-input100 validate-input">
+          <input
+            class="input100"
+            type="text"
+            name="username"
+            formControlName="username"
+          />
+          <span class="focus-input100"></span>
+          <span *ngIf="!registerForm.value.username" class="label-input100"
+            >Username</span
+          >
+        </div>
+        <p *ngIf="errorUser" class="error-message">Username is required</p>
+
+        <p style="font-size: 1rem; margin-bottom: 0.2rem; margin-left: 0.5rem">
+          Email:
+        </p>
+        <div class="wrap-input100 validate-input">
+          <input
+            class="input100"
+            type="text"
+            name="username"
+            formControlName="email"
+          />
+          <span class="focus-input100"></span>
+          <span *ngIf="!registerForm.value.email" class="label-input100"
+            >Email</span
+          >
+        </div>
+        <p *ngIf="errorEmail" class="error-message">Email is required</p>
+
+        <p
+          style="
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+            margin-left: 0.5rem;
+            margin-top: 2rem;
+          "
+        >
+          Password:
+        </p>
+        <div class="wrap-input100 validate-input">
+          <input class="input100" type="password" formControlName="password" />
+          <span class="focus-input100"></span>
+          <span *ngIf="!registerForm.value.password" class="label-input100"
+            >Password</span
+          >
+        </div>
+        <p *ngIf="errorPass" class="error-message">Password is required</p>
+
+        <p style="font-size: 1rem; margin-bottom: 0.2rem; margin-left: 0.5rem">
+          Firstname:
+        </p>
+        <div class="wrap-input100 validate-input">
+          <input
+            class="input100"
+            type="text"
+            name="username"
+            formControlName="firstName"
+          />
+          <span class="focus-input100"></span>
+          <span *ngIf="!registerForm.value.firstName" class="label-input100"
+            >firstname</span
+          >
+        </div>
+        <p *ngIf="errorFirstname" class="error-message">
+          Firstname is required
+        </p>
+
+        <p style="font-size: 1rem; margin-bottom: 0.2rem; margin-left: 0.5rem">
+          Lastname:
+        </p>
+        <div class="wrap-input100 validate-input">
+          <input
+            class="input100"
+            type="text"
+            name="username"
+            formControlName="lastName"
+          />
+          <span class="focus-input100"></span>
+          <span *ngIf="!registerForm.value.lastName" class="label-input100"
+            >Lastname</span
+          >
+        </div>
+        <p *ngIf="errorLastname" class="error-message">Lastname is required</p>
+
+        <p style="font-size: 1rem; margin-bottom: 0.2rem; margin-left: 0.5rem">
+          Phone:
+        </p>
+        <div class="wrap-input100 validate-input">
+          <input
+            class="input100"
+            type="text"
+            name="username"
+            formControlName="telephone"
+          />
+          <span class="focus-input100"></span>
+          <span *ngIf="!registerForm.value.telephone" class="label-input100"
+            >Phone</span
+          >
+        </div>
+        <p *ngIf="errorPhone" class="error-message">Phone is required</p>
+
+        <div class="container-login100-form-btn" style="margin-top: 2rem">
+          <button type="submit" class="login100-form-btn">Register</button>
+        </div>
+
+        <span *ngIf="!isErrorMessage" class="label-input100">{{
+          errorMessage
+        }}</span>
+
+        <div class="text-center p-t-20 p-b-20">
+          <span class="txt2 linktosecond"> or </span>
+          <a class="linktosecond" routerLink="/login">Login</a>
+        </div>
+      </form>
+
+      <div
+        class="login100-more"
+        style="
+          background-image: url('../.././../assets/images/bg-01.jpg');
+          filter: brightness(70%);
+        "
+      ></div>
+    </div>
+  </div>
+</div>
