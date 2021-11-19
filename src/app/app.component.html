@@ -1,6 +1,8 @@
 <!-- Navigation -->
 <div class="logo">
-  <i class="fa fa-plane" aria-hidden="true"><span>Landing Page</span></i>
+  <a style="text-decoration: none" routerLink="/">
+    <span>Rivesly</span>
+  </a>
 </div>
 <a class="menu-toggle rounded" href="#">
   <i class="fa fa-bars"></i>
@@ -10,9 +12,19 @@
     <li class="sidebar-brand">
       <a class="smooth-scroll" href="#Header"></a>
     </li>
+
     <li class="sidebar-nav-item">
-      <a class="smooth-scroll" href="#page-top">Home</a>
+      <a class="smooth-scroll" routerLink="/">Home</a>
     </li>
+
+    <li class="sidebar-nav-item">
+      <a class="smooth-scroll" routerLink="login">Login</a>
+    </li>
+
+    <li class="sidebar-nav-item">
+      <a class="smooth-scroll" routerLink="register">Register</a>
+    </li>
+
     <li class="sidebar-nav-item">
       <a class="smooth-scroll" href="#About">About</a>
     </li>
