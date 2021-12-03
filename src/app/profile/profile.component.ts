@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -8,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProfileComponent implements OnInit {
 
+
   data=""
   constructor( private router: ActivatedRoute) { }
 
@@ -15,5 +17,6 @@ export class ProfileComponent implements OnInit {
     console.log(this.router.snapshot.params)
     this.data = this.router.snapshot.params.name
   }
+  
 
 }
